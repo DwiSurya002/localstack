@@ -1,0 +1,103 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.1.116"
+        }
+      },
+      "Chapter8Stack-CDKLocal": {
+        "id": "Chapter8Stack-CDKLocal",
+        "path": "Chapter8Stack-CDKLocal",
+        "children": {
+          "Dynamo-CDKLocal": {
+            "id": "Dynamo-CDKLocal",
+            "path": "Chapter8Stack-CDKLocal/Dynamo-CDKLocal",
+            "children": {
+              "MyTable": {
+                "id": "MyTable",
+                "path": "Chapter8Stack-CDKLocal/Dynamo-CDKLocal/MyTable",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Chapter8Stack-CDKLocal/Dynamo-CDKLocal/MyTable/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                      "aws:cdk:cloudformation:props": {
+                        "keySchema": [
+                          {
+                            "attributeName": "id",
+                            "keyType": "HASH"
+                          }
+                        ],
+                        "attributeDefinitions": [
+                          {
+                            "attributeName": "id",
+                            "attributeType": "S"
+                          }
+                        ],
+                        "billingMode": "PAY_PER_REQUEST"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_dynamodb.CfnTable",
+                      "version": "2.34.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "Chapter8Stack-CDKLocal/Dynamo-CDKLocal/MyTable/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.34.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_dynamodb.Table",
+                  "version": "2.34.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.116"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Chapter8Stack-CDKLocal/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Chapter8Stack-CDKLocal/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.34.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.116"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.34.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.34.0"
+    }
+  }
+}
